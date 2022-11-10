@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Telefonía Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#lineasActivadas">Líneas activadas</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Líneas
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#lineasTrimestre">líneas activadas por trimestre</a></li>
+                        <li><a class="dropdown-item" href="#lineasPrepago">Líneas prepago activadas por año</a></li>
+                        <li><a class="dropdown-item" href="#lineasPospago">Líneas pospago activadas por año</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lineasActivadas">Líneas activadas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Estadísticas y gráficas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#lineasTrimestre">Líneas activadas por trimestre</a></li>
+                            <li><a class="dropdown-item" href="#lineasPrepago">Líneas prepago activadas</a></li>
+                            <li><a class="dropdown-item" href="#lineasPospago">Líneas pospago activadas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lineasVs">Líneas prepago vs líneas pospago</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="shadow mt-5">
+        <img src="./img/pre.png" alt="Imagen de entrada" class="w-100" srcset="">
+    </div>
+    <div class="container shadow py-3 my-4 rounded-3">
+        <!-- <div class="container my-5" onload="activeItem()">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item w-50 text-center mx-2" id="showServicioId"><a class="page-link"
+                            onclick="showServicio(), activeItem()">Líneas en servicio</a></li>
+                    <li class="page-item w-50 text-center mx-   " id="showActivadasId"><a class="page-link"
+                            onclick="showActivadas(), activeItem()">Líneas Activadas</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container my-5">
+            <div id="enServicio" class="container">
+            </div>
+
+            <div id="lineasActivadas" style="display: none" class="container">
+            </div> -->
+
+        <br id="lineasActivadas">
+        <div class="container">
+            <div class="row" id="">
+                <div class="col-12">
+                    <h1>Líneas activadas entre los años 2019 y 2022</h1>
+                </div>
+                <div class="col-12">
+                    <div class='tableauPlaceholder' id='viz1668104250609' style='position: relative'><noscript><a
+                                href='#'><img alt='Líneas en servicio '
+                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineasenservicio-info&#47;Lneasenservicio&#47;1_rss.png'
+                                    style='border: none' /></a></noscript><object class='tableauViz'
+                            style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='Lineasenservicio-info&#47;Lneasenservicio' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image'
+                                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineasenservicio-info&#47;Lneasenservicio&#47;1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='es-ES' />
+                            <param name='filter' value='publish=yes' />
+                        </object></div>
+                    <script
+                        type='text/javascript'>                    var divElement = document.getElementById('viz1668104250609'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                </div>
+            </div>
+
+            <br id="lineasTrimestre">
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <h2>Líneas activadas por trimestre desde 2019-2021 y primer trimestre de 2022*</h2>
+                    <p> <i>*Los trimestres están convinados, es decir, el primer trimestre del año 2019, está convinado
+                            con el primer trimestre de 2020, 2021 y 2022, etc.</i>
+                        <hr>
+                        En el gráfico podemos ver que sucesos como la pandemia, apenas afectaron a esta a la cantidad de
+                        líneas que se activaron en estos años, puesto que las cifras son muy similares en cada
+                        trimestre.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class='tableauPlaceholder' id='viz1668097911678' style='position: relative'><noscript><a
+                                href='#'><img alt='Líneas activadas por trimestre '
+                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineasactivadasportrimestre-info&#47;Lneasactivadasportrimestre&#47;1_rss.png'
+                                    style='border: none' /></a></noscript><object class='tableauViz'
+                            style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name'
+                                value='Lineasactivadasportrimestre-info&#47;Lneasactivadasportrimestre' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image'
+                                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineasactivadasportrimestre-info&#47;Lneasactivadasportrimestre&#47;1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='es-ES' />
+                        </object></div>
+                    <script
+                        type='text/javascript'>                    var divElement = document.getElementById('viz1668097911678'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                </div>
+            </div>
+            <br>
+            <hr>
+
+            <div class="row" id="lineasPrepago">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class='tableauPlaceholder' id='viz1668102101671' style='position: relative'><noscript><a
+                                href='#'><img alt='Hoja 1 '
+                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineasprepagoporao-info&#47;Hoja1&#47;1_rss.png'
+                                    style='border: none' /></a></noscript><object class='tableauViz'
+                            style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='Lineasprepagoporao-info&#47;Hoja1' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image'
+                                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineasprepagoporao-info&#47;Hoja1&#47;1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='es-ES' />
+                            <param name='filter' value='publish=yes' />
+                        </object></div>
+                    <script
+                        type='text/javascript'>                    var divElement = document.getElementById('viz1668102101671'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <h2>Líneas prepago activadas entre los años 2019 y 2022</h2>
+                    <p> <i>*Los datos están tomados desde enero de 2019 hasta marzo de 2022*</i>
+                        <hr>
+                        Según el gráfico podemos ver que la cantidad de líneas prepago activadas en los últimos años van
+                        en aumento, y esto queda evidenciado en la gráfica. Las razones podrían variar.
+                    </p>
+                </div>
+            </div>
+
+            <br id="lineasPospago">
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <h2>Líneas pospago activadas entre los años 2019 y 2022</h2>
+                    <p> <i>*Los datos están tomados desde enero de 2019 hasta marzo de 2022*</i>
+                        <hr>
+                        Al igual que se presenta en el caso de las líneas prepago, se nota un crecimiento parecido,
+                        puesto que cada año aumenta el número de líneas pospago activadas.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class='tableauPlaceholder' id='viz1668103855401' style='position: relative'><noscript><a
+                                href='#'><img alt='Líneas pospago activadas entre 2019  y 2022 '
+                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineaspospagoporao-info&#47;Hoja2&#47;1_rss.png'
+                                    style='border: none' /></a></noscript><object class='tableauViz'
+                            style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='Lineaspospagoporao-info&#47;Hoja2' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image'
+                                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineaspospagoporao-info&#47;Hoja2&#47;1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='es-ES' />
+                            <param name='filter' value='publish=yes' />
+                        </object></div>
+                    <script
+                        type='text/javascript'>                    var divElement = document.getElementById('viz1668103855401'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                </div>
+            </div>
+
+
+            <br id="lineasVs">
+            <hr>
+
+            <div class="row">
+                <div class="col-12">
+                    <h1>Comparación entre líneas prepago y pospago, activadadas entre 2019 y 2022</h1>
+                    <P>
+                    <P>Podemos afirmar que el líder en el mercado es la compañía Comcel, y que su línea por antonomacia
+                        es la prepago, la cual es la más solicitada en en la mayoría de compañías.</P>
+                    </P>
+                </div>
+                <div class="col-12">
+                    <div class='tableauPlaceholder' id='viz1668104482588' style='position: relative'><noscript><a
+                                href='#'><img alt='Líneas prepago vs líneas pospago '
+                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineasprepagovsprepago&#47;Hoja3&#47;1_rss.png'
+                                    style='border: none' /></a></noscript><object class='tableauViz'
+                            style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='Lineasprepagovsprepago&#47;Hoja3' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image'
+                                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;Lineasprepagovsprepago&#47;Hoja3&#47;1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='es-ES' />
+                            <param name='filter' value='publish=yes' />
+                        </object></div>
+                    <script
+                        type='text/javascript'>                    var divElement = document.getElementById('viz1668104482588'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer" class="shadow">
+        <div class="bg-dark p-3">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 border-end">
+                    <h3 class="text-center">Secciones</h3>
+                    <hr>
+                    <p class="text-center">General</p>
+                    <ul class="p-0 m-0">
+                        <li class="btn btn-light w-100 my-1"><a class="as" href="#">Home</a></li>
+                        <li class="btn btn-light w-100  my-1"> <a class="as" href="#lineasActivadas">Líneas
+                                activadas</a></li>
+
+                        <hr>
+                        <p class="text-center">Gráficas y Estadísticas</p>
+                        <li class="btn btn-light w-100  my-1"><a class="as" href="#lineasTrimestre">Líneas
+                                activadas por trimestre</a></li>
+                        <li class="btn btn-light w-100  my-1"><a class="as" href="#lineasPrepago">Líneas prepago
+                                activadas</a></li>
+                        <li class="btn btn-light w-100  my-1"><a class="as" href="#lineasPospago">Líneas pospago
+                                activadas</a></li>
+                        <li class="btn btn-light w-100  my-1"><a class="as" href="#lineasVs">Líneas prepago
+                                vs línea pospago</a></li>
+                        <hr>
+                        <li class="text-center"> © 2021 - Todos los
+                            derechos reservados</li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 border-end">
+                    <h3 class="text-center">Recursos</h3>
+                    <hr>
+                    <p class="text-center">Recursos usados en el proyecto</p>
+                    <li class="btn btn-light w-100  my-1"><a class="as" href="https://www.tableau.com/"
+                            target="_blank">Tableau</a></li>
+                    <li class="btn btn-light w-100  my-1"><a class="as" href="https://picsart.com/"
+                            target="_blank">Picsart</a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

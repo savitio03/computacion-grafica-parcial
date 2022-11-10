@@ -1,0 +1,28 @@
+/** @format */
+
+* {
+  font-family: "Kanit", sans-serif;
+}
+.page-item {
+  cursor: pointer;
+}
+
+#footer {
+  color: white !important;
+}
+
+
+.as {
+  text-decoration: none !important;
+  color: black !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.as:hover {
+  color: #00586E !important;
+  letter-spacing: 3px;
+}
+
+li {
+  list-style: none !important;
+}
